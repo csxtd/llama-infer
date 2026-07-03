@@ -34,7 +34,7 @@ CPUDeviceAllocator::CPUDeviceAllocator()
         if (byte_size == 0) return;
         if (!src_ptr || !dst_ptr) return ;
         if (memcpy_kind == MemcpyKind::kCPU2CPU){
-            std::memcmp(src_ptr, dst_ptr, byte_size);
+            std::memcpy(dst_ptr, src_ptr, byte_size);
         }
 
     }
